@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "303323618230",
+    "firebase_url": "https://chat-8ea1d.firebaseio.com",
+    "project_id": "chat-8ea1d",
+    "storage_bucket": "chat-8ea1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303323618230:android:42440be3524c69a4",
+        "android_client_info": {
+          "package_name": "com.example.dygy.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303323618230-4be8fch8sd3js9v3oaad3p4a7dsk6tl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO6jYCc8sEf0suxER6OjaXjhm3eEQEryM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
