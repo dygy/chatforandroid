@@ -1,0 +1,79 @@
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision 33bb9f671d76ec628997784fced4d9ee64e91aad)
++++ app/build.gradle	(revision )
+@@ -1,5 +1,4 @@
+ apply plugin: 'com.android.application'
+-
+ android {
+     compileSdkVersion 25
+     buildToolsVersion "25.0.1"
+@@ -10,6 +9,13 @@
+         versionCode 1
+         versionName "1.0"
+         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
++        multiDexEnabled true
++
++
++
++
++
++
+     }
+     buildTypes {
+         release {
+@@ -18,26 +24,21 @@
+         }
+     }
+ }
+-
+ dependencies {
+-    compile fileTree(dir: 'libs', include: ['*.jar'])
+-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+-        exclude group: 'com.android.support', module: 'support-annotations'
+-    })
+-    compile 'com.android.support:appcompat-v7:25.0.1'
++    compile 'com.android.support:multidex:1.0.1'
++    compile ('com.android.support:appcompat-v7:25.3.1') {
++        exclude group: 'com.android.support', module: 'support-v7'
++    }
+     testCompile 'junit:junit:4.12'
+-
+-    //Add Library
+-    compile 'com.android.support:design:25.0.1'
+-    compile 'com.firebaseui:firebase-ui:0.6.2'
+ }
+-apply plugin: 'com.google.gms.google-services'
+-
+ dependencies {
+     compile fileTree(dir: 'libs', include: ['*.jar'])
+-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
++    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2') {
+         exclude group: 'com.android.support', module: 'support-annotations'
+-    })
++    }
++    //Add Library
++    compile 'com.android.support:design:25.3.1'
++    compile 'com.firebaseui:firebase-ui:0.6.2'
+     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+     compile 'com.google.firebase:firebase-messaging:10.0.1'
+     compile 'com.google.firebase:firebase-core:10.0.1'
+@@ -46,14 +47,5 @@
+     compile 'com.google.firebase:firebase-storage:10.0.1'
+     compile 'com.google.firebase:firebase-config:10.0.1'
+     compile 'com.google.firebase:firebase-crash:10.0.1'
+-    testCompile 'junit:junit:4.12'
+ }
+-
+-
+-
+-
+-
+-
+-
+-
+ apply plugin: 'com.google.gms.google-services'
+\ No newline at end of file
